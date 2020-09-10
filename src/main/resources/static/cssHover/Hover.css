@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+
+::selection {
+  background: #19f6e8;
+}
+.svg-wrapper {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 400px;
+}
+.shape1,
+.shape2 {
+  stroke-dasharray: 1120;
+  stroke-width: 3px;
+  fill: transparent;
+  stroke: #f90;
+  border-radius: 12px;
+  border-bottom: 5px solid black;
+  transition-timing-function: linear;
+  transition: stroke-dashoffset 4s, stroke-dasharray 4s;
+}
+.shape1 {
+  stroke-dashoffset: 1120;
+}
+.shape2 {
+  stroke-dashoffset: -1120;
+}
+.text {
+  
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: 8px;
+  color: #000040;
+  top: -50px;
+  position: relative;
+}
+.svg-wrapper:hover .shape1,
+.svg-wrapper:hover .shape2 {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1120;
+  
+}

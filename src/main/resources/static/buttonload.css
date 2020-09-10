@@ -1,0 +1,57 @@
+@charset "ISO-8859-1";
+
+
+.btn {
+	text-decoration:none;
+	font-family:Arial;
+	box-shadow:inset #f5edf5 0px 5px 8px -1px,#b2b8b6 1px 5px 2px;
+	o-box-shadow:inset #f5edf5 0px 5px 8px -1px,#b2b8b6 1px 5px 2px;
+	-moz-box-shadow:inset #f5edf5 0px 5px 8px -1px,#b2b8b6 1px 5px 2px;
+	-webkit-box-shadow:inset #f5edf5 0px 5px 8px -1px,#b2b8b6 1px 5px 2px;
+	background:#eaf2f2;
+	background:-o-linear-gradient(90deg, #eaf2f2, #bbbdbd);
+	background:-moz-linear-gradient( center top, #eaf2f2 5%, #bbbdbd 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eaf2f2), color-stop(1, #bbbdbd) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaf2f2', endColorstr='#bbbdbd');
+	background:-webkit-linear-gradient(#eaf2f2, #bbbdbd);
+	background:-ms-linear-gradient(#eaf2f2, #bbbdbd);
+	background:linear-gradient(#eaf2f2, #bbbdbd);
+	line-height:4px;
+	
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	text-align:center;
+	vertical-align:middle;
+	display:inline-block;
+	font-size:20px;
+	color:#4d434d;
+	width:129px;
+	height:8px;
+	padding:13px;
+	text-shadow:#e0dde0 -1px -1px 0px;
+	border-color:#d1d1d1;
+	border-width:2px;
+	border-style:solid;
+	
+}
+
+.btn:active {
+	box-shadow:inset #f5edf5 0px 5px 8px -1px,#b2b8b6 1px 0 2px;
+	o-box-shadow:inset #f5edf5 0px 5px 8px -1px,#b2b8b6 1px 0 2px;
+	-moz-box-shadow:inset #f5edf5 0px 5px 8px -1px,#b2b8b6 1px 0 2px;
+	-webkit-box-shadow:inset #f5edf5 0px 5px 8px -1px,#b2b8b6 1px 0 2px;
+	position:relative;
+	top:5px
+}
+
+.btn:hover {
+	background:#bbbdbd;
+	background:-o-linear-gradient(90deg, #bbbdbd, #eaf2f2);
+	background:-moz-linear-gradient( center top, #bbbdbd 5%, #eaf2f2 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bbbdbd), color-stop(1, #eaf2f2) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbbdbd', endColorstr='#eaf2f2');
+	background:-webkit-linear-gradient(#bbbdbd, #eaf2f2);
+	background:-ms-linear-gradient(#bbbdbd, #eaf2f2);
+	background:linear-gradient(#bbbdbd, #eaf2f2);
+}

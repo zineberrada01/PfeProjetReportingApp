@@ -1,0 +1,106 @@
+@charset "ISO-8859-1";
+.nav1 {
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+:root {
+    font-size: 10px;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    width: 12rem;
+    height: 5rem;
+    font-size: 17px;
+    text-align: center;
+    line-height: 7rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding-top : 17px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+    margin: 3rem;
+}
+
+#showit{
+display:none;
+background:white;
+}
+#showit1{
+display:none;
+background:white;
+}
+#showit2{
+display:none;
+background:white;
+}
+#showit3{
+display:none;
+background:white;
+}
+#showit4{
+display:none;
+background:white;
+}
+
+nav li::before,
+nav li::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav li::before {
+    background-color: white;
+    z-index: -1;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+nav li::after {
+    background-color: #e8f380;
+    transform: translate(1.5rem, 1.5rem);
+    z-index: -2;
+}
+
+nav li:hover {
+    transform: translate(1.5rem, 1.5rem);
+    color: white;
+}
+
+nav li:hover::before {
+    background-color: #e8f380;
+}
+
+nav li:hover::after {
+    background-color: white;
+    transform: translate(-1.5rem, -1.5rem);
+}
+
+
+.tailleLab{
+	font-family:"Montserrat", sans-serif;
+    font-size: 100px; 
+    color:#888;
+}
+
+a.lien{
+    text-decoration: none;/*Pour que le lien ne soit plus "souligné"...*/
+    color: #888; /*ça reste un exemple*/
+}
+a:hover {
+    color: #e8f380;
+    transform: translate(-1.5rem, -1.5rem);
+}

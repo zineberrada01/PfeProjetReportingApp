@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<head>
+<meta charset="utf-8"/>
+<title>Product Manager</title>
+</head>
+<body>
+<div class="container my-2">
+    <h1>Repport List</h1>
+    <br/><br/>
+    <table  class="table table-striped table-responsive-md">
+        <thead>
+            <tr>
+                <th>Repport ID </th>
+                <th>File name</th>
+                <th>Verification</th>
+                <th>Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+                <tr th:each="listFile : ${Files}">
+                <td th:text="${listFile.id}"> </td>
+                <td th:text="${listFile.FileName}"></td>
+                <td th:text="${listFile.Verif}"></td>
+                <td>
+                    <a th:href="@{/edit/{id}(id=${listFile.id})}" class="btn btn-primary">Modifier</a>
+                   <!--  &nbsp;&nbsp;&nbsp;
+                    <a th:href="/@{'/delete/' + ${listFile.id}}">Delete</a> -->
+                </td>
+            </tr>
+         </tbody>
+        
+    </table> </br>
+     <a th:href="@{/previouswelcome}" class="btn btn-primary">Previous Page</a>
+    <!-- <form action="#" th:action="@{/upd}" th:objects="${Files}"  method="post" >
+    <input type="text" th:field="*{fileName}" placeholder="Nom du Fichier" class="form-control mb-4 col-4"/>
+    <a th:href="@{/upd}" class="btn btn-primary">Modifier</a> -->
+    
+    <!--  -->
+</div>   
+</body>
+</html>

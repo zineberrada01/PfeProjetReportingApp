@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" class="js" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#" />
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="/welcomeNav.css" />
+<link rel="stylesheet" type="text/css" href="/Nav.css" />
+<link rel="stylesheet" type="text/css" href="/logoutbutton.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/buttonload.css" /> -->
+<link rel="stylesheet" href="style1.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="/js/file.js"></script>
+<script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  
+<header class="main_h">
+
+    <div class="row">
+        <a class="logo" href="#">P/F</a>
+
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href=".sec01">Section 01</a></li>
+                <li><a href=".sec02">Section 02</a></li>
+                <li><a href=".sec03">Section 03</a></li>
+                <li><a href=".sec04">Section 04</a></li>
+            </ul>
+        </nav>
+
+    </div> <!-- / row -->
+
+</header>
+
+<div class="hero">
+
+    <h1><span>Systéme de supervision du marché interbancaire</span><br>Génération de Rapports</h1>
+
+    <div >
+        <span></span>
+    </div>
+    <div >
+        <h2>Welcome <span sec:authentication="name"></span></h2>
+    </div>
+         <form th:action="@{/logout}" method="POST">
+         <button style="float:right;" class="btn1" type="submit" value="Logout">LOGOUT&nbsp;<img src="/images/logout-outlined-arrow-and-square.png"></button>
+         </form>
+</div>
+
+<div class="nav1">
+    <nav>
+  <ul>
+    <li id="show">MIB</li>
+    <li id="show1">Télé adj</li>
+    <li id="show2">Crossed</li>
+    <li id="show3">Save</li>
+    <li id="show4">Check</li>
+
+    
+  </ul>
+ 
+  </nav>
+  
+  <script>
+document.querySelector("#show").onclick = function() { 
+document.querySelector("#showit").style.display=(window.getComputedStyle(document.querySelector('#showit')).display=='none') ? "block" : "none"; 
+}
+</script>
+  <script>
+document.querySelector("#show1").onclick = function() { 
+document.querySelector("#showit1").style.display=(window.getComputedStyle(document.querySelector('#showit1')).display=='none') ? "block" : "none"; 
+}
+</script>
+ <script>
+document.querySelector("#show2").onclick = function() { 
+document.querySelector("#showit2").style.display=(window.getComputedStyle(document.querySelector('#showit2')).display=='none') ? "block" : "none"; 
+}
+</script>
+ <script>
+document.querySelector("#show3").onclick = function() { 
+document.querySelector("#showit3").style.display=(window.getComputedStyle(document.querySelector('#showit3')).display=='none') ? "block" : "none"; 
+}
+</script>
+<script>
+document.querySelector("#show4").onclick = function() { 
+document.querySelector("#showit4").style.display=(window.getComputedStyle(document.querySelector('#showit4')).display=='none') ? "block" : "none"; 
+}
+</script>
+</div>
+
+  <div id="showit"> 
+      
+      <center>
+      <FONT size="5pt"> <label >Générer le rapport des opérations ciomc avec graphs </label></FONT><br><br>
+      <img src="/images/arrow_down_download_save_icon_123721.png">
+      <table><tr><td> <a th:href="@{/CiomcHtml}"><img  src="/images/icon_html_256_30059.png"></a></td><td> <a th:href="@{/CiomcPdf}"><img  src="/images/icon_pdf_256_30067.png"></a></td></tr></table></center>
+      
+	
+
+</div>
+<div id="showit1"> 
+   
+      <center>
+      <FONT size="5pt"> <label >Générer les rapports de la pension livrée </label></FONT><br><br>
+      <img src="/images/arrow_down_download_save_icon_123721.png">
+      <table><tr><td> <a th:href="@{/getTlAdj1}"><img  src="/images/icon_html_256_30059.png"></a></td><td> <a th:href="@{/getTlAdj2}"><img  src="/images/icon_pdf_256_30067.png"></a></td></tr></table></center>
+      
+</div>
+<div id="showit2"> 
+   
+      <center>
+      <FONT size="5pt"> <label >Générer le tableau croisé du marché interbancaire </label></FONT><br><br>
+      <img src="/images/arrow_down_download_save_icon_123721.png">
+      <table><tr><td> <a th:href="@{getcross2}"><img  src="/images/icon_html_256_30059.png"></a></td><td> <a th:href="@{getcrossed}"><img  src="/images/icon_pdf_256_30067.png"></a></td></tr></table></center>
+      
+</div>
+
+<!-- <div id="showit3">
+  <center><th:block th:include="/_menu"></th:block>
+      
+      <center>
+        <FONT size="5pt"><a class="lien" th:href="@{/uploadOneFile}">Charger un fichier pour l'enregistrer dans la Base de Données </a><br><br>
+        <FONT size="5pt"><a class="lien" th:href="@{/uploadMultiFile}">Charger plusieurs fichiers pour vérification </a>
+      </center>
+
+</div> -->
+<div id="showit4">
+<center><FONT size="5pt"><a  th:href="@{/listFile}">Vérifier les rapports </a><br><br>
+</FONT></center>
+</div>
+
+
+<div class="row content">
+  
+    
+</div>
+
+       
+      <center><FONT size =7px><h3>Charger un fichier:</h3></FONT>
+       
+      <!-- MyUploadForm -->
+      
+       
+      <div><form  method="POST"
+         action="/uploadFile" enctype="multipart/form-data">
+        <input  name="file" type="file" class="form-control mb-4 col-4"/> </br><br><br>
+       <button  class="btn1" type="submit" >Save <img  src="/images/19186713521586788037-32.png"></form></div>
+      </form></br></br>
+      
+      <div id ="Ps"> <FONT size =5px><center><a th:href="@{/previouswelcome}" class="btn btn-primary"> <<- Previous Page</a></center></FONT></div>
+       </center>
+   </body>
+</html>
